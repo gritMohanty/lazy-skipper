@@ -1,0 +1,12 @@
+{
+  "name": "Lazy Clicker",
+  "version": "1.0.0",
+  "description": "clicks skip buttons for you, while you sit back and relax",
+  "manifest_version": 3,
+  "author": "Anshuman Mohanty",
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Lazy Clicker"
+  },
+  "permissions": ["scripting", "activeTab"]
+}
