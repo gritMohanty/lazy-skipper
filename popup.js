@@ -5,9 +5,12 @@
     [{ result }] = await chrome.scripting.executeScript({
       target: { tabId: tab.id },
       func: () => {
-        document
-          .getElementsByClassName("ytp-ad-skip-button-modern ytp-button")[0]
-          .click();
+        setInterval(() => {
+          const isSkipAvailable = document.getElementsByClassName(
+            "ytp-ad-skip-button-modern ytp-button"
+          )[0];
+          if (isSkipAvailable) isSkipAvailable.click();
+        }, 2000);
       },
     });
   } catch (e) {
